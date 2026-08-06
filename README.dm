@@ -9,3 +9,5 @@ pip install -r requirements.txt
 Ejecución
 
 streamlit run app.py
+
+Actualicen siempre, todo cambio con su commit
