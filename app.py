@@ -9,7 +9,8 @@ st.set_page_config(
 )
 
 aplicar_estilos()
-marca_sidebar()
+with st.sidebar:
+    marca_sidebar()
 
 
 pagina_sucursal = st.Page(
@@ -19,10 +20,44 @@ pagina_sucursal = st.Page(
     default=True,
 )
 
+pagina_cliente = st.Page(
+    "pages/2_Cliente.py",
+    title="Cliente",
+    icon=":material/store:",
+    
+)
+
+
+pagina_app = st.Page(
+    "pages/3_App.py",
+    title="App",
+    icon=":material/store:",
+    
+)
+
+pagina_resumen_mes = st.Page(
+    "pages/4_Resumen_Mes.py",
+    title="Resumen Mes",
+    icon=":material/store:",
+    
+)
+
+pagina_renovaciones = st.Page(
+    "pages/5_Renovaciones.py",
+    title="Renovaciones",
+    icon=":material/store:",
+    
+)
+
+
 navegacion = st.navigation(
     {
-        "Inteligencia comercial": [
+        "": [
             pagina_sucursal,
+            pagina_cliente,
+            pagina_app,
+            pagina_resumen_mes,
+            pagina_renovaciones
         ],
     }
 )

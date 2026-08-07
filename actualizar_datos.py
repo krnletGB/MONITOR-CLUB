@@ -125,7 +125,7 @@ def main() -> None:
         exist_ok=True,
     )
 
-    #actualizar_detalle_club()
+    actualizar_detalle_club()
     actualizar_venta_club()
     actualizar_clientes_app()
 

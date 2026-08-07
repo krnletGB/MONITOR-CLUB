@@ -78,8 +78,14 @@ def aplicar_estilos() -> None:
             border-right: none;
         }
 
-        [data-testid="stSidebar"] > div:first-child {
-            padding-top: 1rem;
+        [data-testid="stSidebarContent"] {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        [data-testid="stSidebarUserContent"] {
+            order: 1 !important;
+            padding-top: 0.5rem !important;
         }
 
         [data-testid="stSidebar"] * {
@@ -87,7 +93,8 @@ def aplicar_estilos() -> None:
         }
 
         [data-testid="stSidebarNav"] {
-            padding-top: 0.4rem;
+            order: 2 !important;
+            padding-top: -1rem !important;
         }
 
         [data-testid="stSidebarNav"] a {
